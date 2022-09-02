@@ -16,7 +16,17 @@ public class Example2 {
 	}
 	
 	private static int addListFunctional(List<Integer> numbers) {
-		return numbers.stream().reduce(0, Example2::sum);
+		//FORMA 1
+		//return numbers.stream().reduce(0, Example2::sum);
+		//FORMA2
+		return numbers.stream().reduce(0, (a,b)->a+b);
+	}
+	
+	private static int s(List<Integer> numbers) {
+		//FORMA 1
+		//return numbers.stream().reduce(0, Example2::sum);
+		//FORMA2
+		return numbers.stream().reduce(0, (a,b)->a+b);
 	}
 	
 }
